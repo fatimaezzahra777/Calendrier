@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: linear-gradient(100deg, #fff, #23022e);
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.title {
+    background-color: #23022e;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+
+.child th {
+    background-color: #e9ecef;
+    color: #212529;
+    font-weight: 600;
+    padding: 0.8rem;
+    border-bottom: 2px solid #dee2e6;
+}
+
+
+tbody td {
+    padding: 1.2rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ;
+    cursor: pointer;
+}
+
+
+tbody td:hover {
+    background-color: #280235;
+    color: #fff;
+}
+
