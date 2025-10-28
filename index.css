@@ -26,7 +26,10 @@ table {
     font-weight: 600;
     padding: 0.8rem;
     border-bottom: 2px solid #dee2e6;
+    
 }
+
+
 
 
 tbody td {
@@ -48,9 +51,8 @@ tbody td:hover {
 }
 
 .formul input {
-    margin: 1em;
-    width: 80%;
-    
+    margin: 0.5em;
+    width: 80%;  
 }
 
 
@@ -68,7 +70,7 @@ tbody td:hover {
     border-radius: 20px;
     position: absolute;
     background-color: white;
-    top: 25%;
+    top: 20%;
     left: 35%;
     display: none;
 }
