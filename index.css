@@ -19,7 +19,6 @@ table {
     padding: 1rem;
 }
 
-
 .child th {
     background-color: #e9ecef;
     color: #212529;
@@ -29,16 +28,12 @@ table {
     
 }
 
-
-
-
 tbody td {
     padding: 1.2rem;
     border: 1px solid #dee2e6;
     transition: all 0.3s ;
     cursor: pointer;
 }
-
 
 tbody td:hover {
     background-color: #280235;
@@ -55,6 +50,10 @@ tbody td:hover {
     width: 80%;  
 }
 
+.formul select{
+    margin: 0.5em;
+    width: 80%
+}
 
 .formul button{
     color: #fff;
@@ -70,7 +69,7 @@ tbody td:hover {
     border-radius: 20px;
     position: absolute;
     background-color: white;
-    top: 20%;
+    top: 10%;
     left: 35%;
     display: none;
 }
@@ -78,6 +77,3 @@ tbody td:hover {
 .formul h1{
     text-align: center;
 }
-
-
-
