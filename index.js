@@ -7,8 +7,16 @@ form.forEach(element =>{
   });
 });
 
+const btn = document.querySelector("#button");
 
-console.log(form);
+btn.foreach(butn =>{
+  butn.addEventListener('click', () => {
+    btn.style.display ='none';
+  })
+})
+
+
+console.log(btn);
 console.log(formul);
 
 
