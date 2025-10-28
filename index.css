@@ -8,6 +8,7 @@ table {
     width: 100%;
     text-align: center;
     border-radius: 5%;
+    position: relative;
 }
 
 .title {
@@ -41,7 +42,34 @@ tbody td:hover {
     color: #fff;
 }
 
+.formul label{
+    display: flex;
+    margin: 1em;
+}
+
+.formul input {
+    margin: 1em;
+    width: 80%;
+    
+}
+
+
+.formul button{
+    color: #fff;
+    background-color: #23022e;
+    border-radius: 20px ;
+    padding-left: 20px ;
+    padding-right: 20px;
+    margin: 1em;
+}
+
 .formul{
+    border: 1px solid ;
+    border-radius: 20px;
+    position: absolute;
+    background-color: white;
+    top: 25%;
+    left: 35%;
     display: none;
 }
 
