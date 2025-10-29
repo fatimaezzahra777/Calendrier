@@ -1,4 +1,4 @@
-const form = document.querySelectorAll("td");
+const form = document.querySelectorAll(".active-day");
 const formul = document.querySelector('.formul');
 const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
@@ -19,8 +19,10 @@ btn.addEventListener('click', () => {
 })
 
 for (let i = 0; i <= form.length; i++) {
-    form[i].textContent = i+1;
+    formul[i].textContent = i+1;
 }
+
+
 
 
 
