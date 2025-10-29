@@ -33,7 +33,6 @@ tbody td {
     border: 1px solid #dee2e6;
     transition: all 0.3s ;
     cursor: pointer;
-    overflow: hidden;
 
 }
 
@@ -56,6 +55,7 @@ tbody td:hover {
     margin: 0.5em;
     width: 80%
 }
+
 
 .formul button{
     color: #fff;
