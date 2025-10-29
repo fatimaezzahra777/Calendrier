@@ -16,7 +16,7 @@ btn.addEventListener('click', () => {
    btn.style.display ='none';
 })
 
-const valeurs = Array.from(document.querySelectorAll(".semaine")).map(td => td.textContent);
+const valeurs = Array.map(td => td.textContent);
 console.log(valeurs); 
 
 
