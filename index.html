@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/style/all.min.css">
     <link rel="stylesheet" href="/style/all.min.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-
     <title>Calandrier</title>
 </head>
 
@@ -31,40 +29,50 @@
         </thead>
         <tbody>
             <tr class="semaine">
-                <td>01</td>
-                <td>02</td>
-                <td>03</td>
-                <td>04</td>
-                <td>05</td>
-                <td>06</td>
-                <td>07</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
 
         </tbody>
     </table>
     <section>
+        
         <form class="formul">
             <h1>Calandrier</h1>
-            <label for="nom">Nom du client</label>
-            <input type="text" name="nom" id="nom"/>
-            <label for="heure">Heure de début</label>
-            <input type="datetime" id="heure" name="heure" />
-            <label for="date">Heure de fin</label>
-            <input type="datetime" id="date"/>
-            <label for="time">La Date</label>
-            <input type="date" name="time" id="time">
-            <label for="nombre">Nombre de Personnes</label>
-            <input type="number" id="nombre" name="nombre">
-            <label for="reserve">Type de Réservation</label>
-            <select name="reserv" id="reserv" title="Réservation">
-                <option value="place">Sur Place</option>
-                <option value="anniv">Anniversaire</option>
-                <option value="Vip">VIP</option>
-            </select>
+            <div class="form-calendrier">
+                <div>
+                <label for="nom">Nom du client</label>
+                <input type="text" name="nom" id="nom" />
+                <label for="heure">Heure de début</label>
+                <input type="time" id="heure" name="heure" />
+                <label for="date">Heure de fin</label>
+                <input type="time" id="date" />
+            </div>
+            <div>
+                <label for="time">La Date</label>
+                <input type="date" name="time" id="time">
+                <label for="nombre">Nombre de Personnes</label>
+                <input type="number" id="nombre" name="nombre">
+                <label for="reserve">Type de Réservation</label>
+                <select name="reserv" id="reserv" title="Réservation">
+                    <option value="place">Sur Place</option>
+                    <option value="anniv">Anniversaire</option>
+                    <option value="Vip">VIP</option> 
+                </select>
+                
+            </div>
+            </div>
+            
             <button type="submit" id="button">Ajouter</button>
+            
         </form>
     </section>
-  
+
 
 
     <script src="/index.js"></script>
