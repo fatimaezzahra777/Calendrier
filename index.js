@@ -3,23 +3,14 @@ const formul = document.querySelector('.formul');
 const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
 const calandar = document.querySelectorAll(".calandar-active");
-
 const btn = document.querySelector("#button");
-const body = document.querySelector("body")
+const body = document.querySelector("body");
+let cases = null;
 
 
 for (let i = 0; i < jour.length; i++) {
     jour[i].textContent = i+1;
 } 
-
-
-jour.forEach(element =>{
-  element.addEventListener('click', () => {
-    formul.style.display = 'block';
-    formulaire.style.display = "flex";
-    
-  });
-});
 
 calandar.forEach(element => {
   element.addEventListener('click', () => {
@@ -28,9 +19,6 @@ calandar.forEach(element => {
   })
 })
 
-
-
-
 const colors = {
   Vip: "bg-danger text-white",
   anniv: "bg-danger text-blue",
@@ -38,17 +26,16 @@ const colors = {
 
 }
 
-
 formul.addEventListener('submit', (event) => {
    event.preventDefault();
 
    const reserv = {
-    nom : document.getElementById("nom").value,
-    HeurDebut : document.querySelector("#heure").value,
-    HeurFin : document.querySelector("#date").value,
-    date : document.querySelector("#time").value,
-    num : document.querySelector("#nombre").value,
-    type : document.querySelector("#reserv").value,
+    nom : document.getElementById("nom").value.trim(),
+    HeurDebut : document.querySelector("#heure").value.trim(),
+    HeurFin : document.querySelector("#date").value.trim(),
+    date : document.querySelector("#time").value.trim(),
+    num : document.querySelector("#nombre").value.trim(),
+    type : document.querySelector("#reserv").value.trim(),
    }
 
    if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
@@ -58,12 +45,6 @@ formul.addEventListener('submit', (event) => {
 
     alert ("la Réservation est ajoutée");
   }
-
-  const elem = document.createElement("div")
-  const stron = document.createTextNode(`
-    <strong>${reserv.nom}</strong><br>
-    ${reserv.HeurDebut} - ${reserv.HeurFin}`)
-  elem.appendChild(stron);
   
 })
 

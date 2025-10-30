@@ -11,8 +11,9 @@ table {
     position: relative;
 }
 
-tr p {
+.temps{
     display: block;
+    justify-content: center;
 }
 .title {
     background-color: #23022e;
@@ -94,6 +95,16 @@ tbody .calandar-active:hover{
 
 /*Responsive*/
 
-@media screen and(max-width: 768px){
-    
-}
+@media screen and (max-width: 768px) {
+      table {
+        font-size: 0.6rem;
+        overflow-x: auto;
+        display: block;
+      }
+
+      .formul {
+        width: 90%;
+        left: 5%;
+        top: 5%;
+      }
+    }
