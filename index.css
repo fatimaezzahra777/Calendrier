@@ -41,6 +41,11 @@ tbody .active:hover {
     color: #fff;
 }
 
+tbody .calandar-active:hover{
+    background-color: #280235;
+    color: white;
+}
+
 .formul label{
     display: flex;
     margin: 1em;

@@ -2,13 +2,13 @@ const jour = document.querySelectorAll(".active");
 const formul = document.querySelector('.formul');
 const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
-const casee = document.querySelectorAll("td");
+
 const btn = document.querySelector("#button");
 const body = document.querySelector("body")
 
 
-for (let i = 0; i < casee.length; i++) {
-    casee[i].textContent = i+1;
+for (let i = 0; i < jour.length; i++) {
+    jour[i].textContent = i+1;
 } 
 
 
