@@ -56,3 +56,4 @@ formul.addEventListener('submit', (event) => {
   elem.appendChild(stron);
   
 })
+
