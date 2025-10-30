@@ -16,6 +16,7 @@ calandar.forEach(element => {
   element.addEventListener('click', () => {
     formul.style.display = 'block';
     formulaire.style.display = "flex";
+    cases = element;
   })
 })
 
@@ -42,9 +43,15 @@ formul.addEventListener('submit', (event) => {
     alert("Veuillez remplir tous les champs.");
     return;
   } else {
-
     alert ("la Réservation est ajoutée");
   }
+
+  const div = document.createElement("div");
+  div.innerHTML = `<p>${reserv.nom}</p><br>${reserv.HeurDebut}-${reserv.HeurFin}<br>
+                    <i></i>`;
+  cases.appendChild(div);
+  formul.reset();
+  formul.style.display = "none";
   
 })
 
