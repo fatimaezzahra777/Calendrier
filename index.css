@@ -35,6 +35,7 @@ tbody td {
     transition: all 0.3s ;
     cursor: pointer;
     text-align: end;
+    vertical-align: top;
 }
 
 tbody .active:hover {
@@ -50,16 +51,13 @@ tbody .calandar-active:hover{
 .formul label{
     display: flex;
     margin: 1em;
+    margin-top: 0.5em;
 }
 
-.formul input {
+.formul input
+.formul select {
     margin: 0.5em;
     width: 80%;  
-}
-
-.formul select{
-    margin: 0.5em;
-    width: 80%
 }
 
 
@@ -81,6 +79,7 @@ tbody .calandar-active:hover{
     top: 10%;
     left: 35%;
     display: none;
+    z-index: 10;
 }
 
 .formul h1{
