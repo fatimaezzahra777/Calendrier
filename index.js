@@ -1,9 +1,10 @@
-const jour = document.querySelectorAll(".active-day");
+const jour = document.querySelectorAll(".active");
 const formul = document.querySelector('.formul');
 const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
 const casee = document.querySelectorAll("td");
 const btn = document.querySelector("#button");
+const body = document.querySelector("body")
 
 
 for (let i = 0; i < casee.length; i++) {
@@ -11,13 +12,13 @@ for (let i = 0; i < casee.length; i++) {
 } 
 
 
-casee.forEach((element, index) =>{
+jour.forEach(element =>{
   element.addEventListener('click', () => {
     formul.style.display = 'block';
-    formulaire.style.display = "flex";
-   
+    formulaire.style.display = "flex"; 
   });
 });
+
 
 
 
@@ -41,11 +42,12 @@ btn.addEventListener('click', (event) => {
    if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
     alert("Veuillez remplir tous les champs.");
     return;
+  } else {
+    alert ("la Réservation est ajoutée");
   }
 
-  document.createElement("div")
-  .className = `p-2 rounded mt-2 ${colors[reserv.type] || "bg-secondary text-white"}`
-  .innerHTML = `
+  const elem = document.createElement("div")
+  elem.innerHTML = `
     <strong>${reserv.nom}</strong><br>
     ${reserv.HeurDebut} - ${reserv.HeurFin}`;
 })
