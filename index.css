@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
     background-color: linear-gradient(100deg, #fff, #23022e);
-    padding: 1em;
 }
 
 table {
@@ -51,11 +50,9 @@ tbody .calandar-active:hover{
 .formul label{
     display: flex;
     margin: 1em;
-    margin-top: 0.5em;
 }
 
-.formul input
-.formul select {
+.formul input , .formul select{
     margin: 0.5em;
     width: 80%;  
 }

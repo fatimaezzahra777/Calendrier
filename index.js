@@ -22,8 +22,8 @@ calandar.forEach(element => {
 
 const colors = {
   Vip: "bg-danger text-white",
-  anniv: "bg-danger text-blue",
-  place: "bg-danger text-red"
+  anniv: "bg-warning text-white",
+  place: "bg-succes text-white"
 
 }
 
@@ -47,8 +47,8 @@ formul.addEventListener('submit', (event) => {
   }
 
   const div = document.createElement("div");
-  div.innerHTML = `<p>${reserv.nom}</p><br>${reserv.HeurDebut}-${reserv.HeurFin}<br>
-                    <i></i>`;
+  div.className = `${colors[reserv.type]}`;
+  div.innerHTML = `<p>${reserv.nom}</p><br>${reserv.HeurDebut}-${reserv.HeurFin}`;
   cases.appendChild(div);
   formul.reset();
   formul.style.display = "none";
