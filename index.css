@@ -36,7 +36,7 @@ tbody td {
     text-align: end;
 }
 
-tbody td:hover {
+tbody .active:hover {
     background-color: #280235;
     color: #fff;
 }
