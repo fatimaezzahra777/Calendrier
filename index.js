@@ -23,7 +23,7 @@ calandar.forEach(element => {
 const colors = {
   Vip: "bg-danger text-white",
   anniv: "bg-warning text-white",
-  place: "bg-succes text-white"
+  place: "bg-warning text-white"
 
 }
 
@@ -39,6 +39,11 @@ formul.addEventListener('submit', (event) => {
     type : document.querySelector("#reserv").value.trim(),
    }
 
+   if(reserv.HeurDebut>=reserv.HeurFin){
+    alert("Changer l'heure Fin.");
+    return;
+   }
+
    if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
     alert("Veuillez remplir tous les champs.");
     return;
@@ -48,9 +53,8 @@ formul.addEventListener('submit', (event) => {
 
   const div = document.createElement("div");
   div.className = `${colors[reserv.type]}`;
-  div.innerHTML = `<p>${reserv.nom}</p><br>${reserv.HeurDebut}-${reserv.HeurFin}`;
+  div.innerHTML = `<p>${reserv.nom}</p>${reserv.HeurDebut}-${reserv.HeurFin}`;
   cases.appendChild(div);
-  formul.reset();
   formul.style.display = "none";
   
 })
