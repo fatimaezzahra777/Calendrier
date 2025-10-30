@@ -29,17 +29,21 @@ const colors = {
 btn.addEventListener('click', (event) => {
    event.preventDefault();
 
-   const nom = document.getElementsById("nom").value;
-   const HeurDebut = document.querySelector("#heure").value;
-   const HeurFin = document.querySelector("#date").value;
-   const date = document.querySelector("#time").value;
-   const num = document.querySelector("#nombre").value;
-   const type = document.querySelector("#reserv").value;
+   const reserv = {
+    nom : document.getElementById("nom").value,
+    HeurDebut : document.querySelector("#heure").value,
+    HeurFin : document.querySelector("#date").value,
+    date : document.querySelector("#time").value,
+    num : document.querySelector("#nombre").value,
+    type : document.querySelector("#reserv").value,
+   }
 
-   if (!nom || !HeurDebut || !HeurFin || !date || !num || !type) {
+   if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
     alert("Veuillez remplir tous les champs.");
     return;
   }
+
+  
 
 
 })
