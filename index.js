@@ -23,11 +23,14 @@ jour.forEach(element =>{
 
 
 const colors = {
-  VIP: "bg-danger text-white",
+  Vip: "bg-danger text-white",
+  anniv: "bg-danger text-blue",
+  place: "bg-danger text-red"
+
 }
 
 
-btn.addEventListener('click', (event) => {
+formul.addEventListener('submit', (event) => {
    event.preventDefault();
 
    const reserv = {
@@ -47,7 +50,9 @@ btn.addEventListener('click', (event) => {
   }
 
   const elem = document.createElement("div")
-  elem.innerHTML = `
+  const stron = document.createTextNode(`
     <strong>${reserv.nom}</strong><br>
-    ${reserv.HeurDebut} - ${reserv.HeurFin}`;
+    ${reserv.HeurDebut} - ${reserv.HeurFin}`)
+  elem.appendChild(stron);
+  
 })
