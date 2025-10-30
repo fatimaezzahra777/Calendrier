@@ -2,6 +2,7 @@ const jour = document.querySelectorAll(".active");
 const formul = document.querySelector('.formul');
 const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
+const calandar = document.querySelectorAll(".calandar-active");
 
 const btn = document.querySelector("#button");
 const body = document.querySelector("body")
@@ -15,9 +16,17 @@ for (let i = 0; i < jour.length; i++) {
 jour.forEach(element =>{
   element.addEventListener('click', () => {
     formul.style.display = 'block';
-    formulaire.style.display = "flex"; 
+    formulaire.style.display = "flex";
+    
   });
 });
+
+calandar.forEach(element => {
+  element.addEventListener('click', () => {
+    formul.style.display = 'block';
+    formulaire.style.display = "flex";
+  })
+})
 
 
 
@@ -46,6 +55,7 @@ formul.addEventListener('submit', (event) => {
     alert("Veuillez remplir tous les champs.");
     return;
   } else {
+
     alert ("la Réservation est ajoutée");
   }
 

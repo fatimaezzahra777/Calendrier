@@ -11,6 +11,9 @@ table {
     position: relative;
 }
 
+tr p {
+    display: block;
+}
 .title {
     background-color: #23022e;
     color: white;
