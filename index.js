@@ -10,12 +10,12 @@ for (let i = 0; i < casee.length; i++) {
     casee[i].textContent = i+1;
 } 
 
-let casse = null;
 
-casee.forEach(element =>{
+casee.forEach((element, index) =>{
   element.addEventListener('click', () => {
     formul.style.display = 'block';
     formulaire.style.display = "flex";
+   
   });
 });
 
@@ -43,14 +43,9 @@ btn.addEventListener('click', (event) => {
     return;
   }
 
-  
-
-
+  document.createElement("div")
+  .className = `p-2 rounded mt-2 ${colors[reserv.type] || "bg-secondary text-white"}`
+  .innerHTML = `
+    <strong>${reserv.nom}</strong><br>
+    ${reserv.HeurDebut} - ${reserv.HeurFin}`;
 })
-
-
-
-
-
-
-
