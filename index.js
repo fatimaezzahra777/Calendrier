@@ -27,6 +27,7 @@ calandar.forEach(element => {
     formul.style.display = 'block';
     formulaire.style.display = "flex";
     cases = element;
+    formul.reset();
   })
 })
 
@@ -68,7 +69,8 @@ formul.addEventListener('submit', (event) => {
 
   const div = document.createElement("div");
   div.className = `reserver ${colors[reserv.type]}`;
-  div.innerHTML = `<p>${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}</p>`;
+  div.innerHTML = `<p>${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}<i class="fa fa-pen mx-1 text-light edit" title="Modifier"></i>
+        <i class="fa fa-trash mx-1 text-light delete" title="Supprimer"></i></p>`;
   cases.appendChild(div);
   formul.style.display = "none";
 })
@@ -80,8 +82,5 @@ const Supprimer = () =>{
 const Moddify = () =>{
   
 }
-
-
-
 
 
