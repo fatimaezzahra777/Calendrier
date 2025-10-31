@@ -4,14 +4,28 @@ const semaine = document.querySelector(".semaine");
 const formulaire = document.querySelector(".form-calendrier");
 const calandar = document.querySelectorAll(".calandar-active");
 const btn = document.querySelector("#button");
-const body = document.querySelector("body");
 const annule = document.querySelector(".annule");
+const three = document.querySelector(".three");
+const four = document.querySelector(".four");
+const five = document.querySelector(".five");
+const siix = document.querySelector(".siix");
+const temp = document.querySelector(".temps_AM");
+const temps = temp.children;
 let cases = null;
 
 
+for (let i=0; i<temps.length ; i++){
+  temps[i].textContent = i+3+":00AM";
+}
+const heur3 = "3:00AM";
+const heur4 = "4:00AM";
+const heur5 = "5:00AM";
+const heur6 = "6:00AM";
+
+
 for (let i = 0; i < jour.length; i++) {
-    jour[i].textContent = i+1;
-} 
+  jour[i].textContent = i + 1;
+}
 
 calandar.forEach(element => {
   element.addEventListener('click', () => {
@@ -21,7 +35,7 @@ calandar.forEach(element => {
   })
 })
 
-annule.addEventListener('click', () =>{
+annule.addEventListener('click', () => {
   formul.style.display = 'none'
 })
 
@@ -29,31 +43,32 @@ const colors = {
   Vip: "bg-danger text-white",
   anniv: "bg-black text-white",
   place: "bg-warning text-white"
-
 }
 
+
 formul.addEventListener('submit', (event) => {
-   event.preventDefault();
+  event.preventDefault();
 
-   const reserv = {
-    nom : document.getElementById("nom").value.trim(),
-    HeurDebut : document.querySelector("#heure").value.trim(),
-    HeurFin : document.querySelector("#date").value.trim(),
-    date : document.querySelector("#time").value.trim(),
-    num : document.querySelector("#nombre").value.trim(),
-    type : document.querySelector("#reserv").value.trim(),
-   }
+  const reserv = {
+    nom: document.getElementById("nom").value,
+    HeurDebut: document.querySelector("#heure").value,
+    HeurFin: document.querySelector("#date").value,
+    date: document.querySelector("#time").value,
+    num: document.querySelector("#nombre").value,
+    type: document.querySelector("#reserv").value,
+  }
+  
 
-   if(reserv.HeurDebut>=reserv.HeurFin){
+  if (reserv.HeurDebut >= reserv.HeurFin) {
     alert("Changer l'heure Fin.");
     return;
-   }
+  }
 
-   if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
+  if (!reserv.nom || !reserv.HeurDebut || !reserv.HeurFin || !reserv.date || !reserv.num || !reserv.type) {
     alert("Veuillez remplir tous les champs.");
     return;
   } else {
-    alert ("la Réservation est ajoutée");
+    alert("la Réservation est ajoutée");
   }
 
   const div = document.createElement("div");
@@ -61,9 +76,9 @@ formul.addEventListener('submit', (event) => {
   div.innerHTML = `<p>${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}</p>`;
   cases.appendChild(div);
   formul.style.display = "none";
-  
-  
 })
+
+
 
 
 
