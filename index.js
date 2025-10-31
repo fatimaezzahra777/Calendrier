@@ -22,7 +22,7 @@ calandar.forEach(element => {
 
 const colors = {
   Vip: "bg-danger text-white",
-  anniv: "bg-warning text-white",
+  anniv: "bg-black text-white",
   place: "bg-warning text-white"
 
 }
@@ -57,5 +57,8 @@ formul.addEventListener('submit', (event) => {
   cases.appendChild(div);
   formul.style.display = "none";
   
+  
 })
+
+
 
