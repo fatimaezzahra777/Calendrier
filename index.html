@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/style/all.min.css">
     <script src="/style/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Calandrier</title>
 </head>
 
-<body>
+<body class="bg-light">
     <div class="temps_AM">
         <p class="trois"></p>
         <p class="quatre"></p>
@@ -34,15 +35,6 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="semaine">
-                <td class="active"></td>
-                <td class="active"></td>
-                <td class="active"></td>
-                <td class="active"></td>
-                <td class="active"></td>
-                <td class="weekend">6</td>
-                <td class="weekend">7</td>
-            </tr>
             <tr class="three" data-hour="3:00AM">
                 <td class="calandar-active"></td>
                 <td class="calandar-active"></td>
@@ -86,9 +78,8 @@
 
     <section>
         <form class="formul">
-            <button class="btn-close annule" type="reset"></button>
             <h1>Calandrier</h1>
-            
+
 
             <div class="form-calendrier">
                 <div class="col-md-6">
@@ -106,7 +97,7 @@
                     <input type="number" id="nombre" name="nombre">
                     <label for="reserve">Type de Réservation</label>
                     <select name="reserv" id="reserv" title="Réservation">
-                        <option value="">Type de réservation</option>
+                        <option value="">Choisir...</option>
                         <option value="place">Sur Place</option>
                         <option value="anniv">Anniversaire</option>
                         <option value="Vip">VIP</option>
@@ -115,9 +106,9 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between mt-3">
-                <button type="submit" id="button" class="btn btn-dark px-4">Ajouter</button>
-                <button type="button" id="deleteBtn" style="display:none;">Supprimer</button>
+            <div class="modal-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary">Annuler</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
             </div>
 
 

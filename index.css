@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: linear-gradient(100deg, #fff, #23022e);
+    min-height: 40vh;
 }
 
 table {
@@ -24,16 +25,17 @@ table {
     font-weight: 600;
     padding: 0.8rem;
     border-bottom: 2px solid #dee2e6;
-    
+
 }
 
 tbody td {
     padding: 1rem;
     border: 1px solid #dee2e6;
-    transition: all 0.3s ;
+    transition: all 0.3s;
     cursor: pointer;
     text-align: end;
     vertical-align: top;
+
 }
 
 tbody .active:hover {
@@ -41,34 +43,35 @@ tbody .active:hover {
     color: #fff;
 }
 
-tbody .calandar-active:hover{
+tbody .calandar-active:hover {
     background-color: #280235;
     color: white;
 }
 
-.formul label{
+.formul label {
     display: flex;
     margin: 1em;
 }
 
-.formul input , .formul select{
+.formul input,
+.formul select {
     margin: 0.5em;
-    width: 80%;  
+    width: 80%;
 }
 
 
-.formul button{
+.formul button {
     color: #fff;
     background-color: #23022e;
-    border-radius: 20px ;
-    padding-left: 20px ;
+    border-radius: 20px;
+    padding-left: 20px;
     padding-right: 20px;
     margin: 1em;
     justify-self: center;
 }
 
-.formul{
-    border: 1px solid ;
+.formul {
+    border: 1px solid;
     border-radius: 20px;
     position: absolute;
     background-color: white;
@@ -78,44 +81,60 @@ tbody .calandar-active:hover{
     z-index: 10;
 }
 
-.formul h1{
+.formul h1 {
     margin-left: 3em;
     color: #280235;
 }
 
-.calandar-active{
+.calandar-active {
     padding: 0;
+    padding-bottom: 0%;
+
 }
 
-.temps_AM{
+.temps_AM {
     display: block;
-    margin-top: 15em;
+    margin-top: 10em;
     margin-left: 2em;
 }
 
-.reserver{
-    max-block-size: 2em;
-    max-width: fit-content;
-    margin: 0;
+.temps_AM p {
+    padding-bottom: 2em;
 }
 
-.annule{
-    cursor: pointer;
-    color: #23022e;
+
+.reserver {
+    max-width: fit-content;
+    border-radius: 5px;
+    margin: 0%;
+}
+
+.delete {
+    width: 2em;
 }
 
 
 /*Responsive*/
 
 @media screen and (max-width: 768px) {
-      table {
+    table {
         font-size: 0.6rem;
         overflow-x: auto;
         display: block;
-      }
+    }
 
-      .formul {
+    .formul {
         left: 6%;
         top: 6%;
-      }
     }
+
+    .temps_AM {
+        display: block;
+        margin-left: 5em;
+    }
+
+    .temps_AM p {
+        font-size: 8px;
+        padding-bottom: 3px ;
+    }
+}
