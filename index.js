@@ -7,8 +7,8 @@ const temp = document.querySelector(".temps_AM");
 const temps = temp.children;
 let cases = null;
 let idCounter = 0;
-let editMode = false;     
-let currentEdit = null;   
+let editMode = false;
+let currentEdit = null;
 
 
 for (let i = 0; i < temps.length; i++) {
@@ -21,7 +21,7 @@ for (let i = 0; i < jour.length; i++) {
 
 calandar.forEach(element => {
   element.addEventListener('click', (e) => {
-  
+
     if (e.target.tagName.toLowerCase() === 'i') return;
     formul.style.display = 'block';
     formulaire.style.display = "flex";
@@ -84,6 +84,12 @@ formul.addEventListener('submit', (event) => {
     return;
   }
 
+  const exist = cases.querySelector(".reserver");
+  if (exist) {
+    alert("Il y a déjà une réservation dans cette case !");
+    return;
+  }
+
   idCounter++;
   const div = document.createElement("div");
   div.dataset.id = idCounter;
@@ -116,7 +122,7 @@ document.addEventListener("click", function (e) {
     e.stopPropagation();
     const reservation = e.target.closest(".reserver");
     if (reservation) {
- 
+
       const text = reservation.querySelector("p").textContent.trim();
       const parts = text.split(" ");
       const nom = parts[0];
@@ -124,7 +130,7 @@ document.addEventListener("click", function (e) {
       const debut = times?.[0] || "";
       const fin = times?.[1] || "";
 
-    
+
       document.getElementById("nom").value = nom;
       document.querySelector("#heure").value = debut;
       document.querySelector("#date").value = fin;
