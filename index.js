@@ -5,6 +5,7 @@ const formulaire = document.querySelector(".form-calendrier");
 const calandar = document.querySelectorAll(".calandar-active");
 const btn = document.querySelector("#button");
 const body = document.querySelector("body");
+const annule = document.querySelector(".annule");
 let cases = null;
 
 
@@ -18,6 +19,10 @@ calandar.forEach(element => {
     formulaire.style.display = "flex";
     cases = element;
   })
+})
+
+annule.addEventListener('click', () =>{
+  formul.style.display = 'none'
 })
 
 const colors = {

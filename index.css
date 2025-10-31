@@ -92,6 +92,12 @@ tbody .calandar-active:hover{
     margin: 0;
 }
 
+.annule{
+    cursor: pointer;
+    text-align: end;
+
+}
+
 
 /*Responsive*/
 
