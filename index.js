@@ -18,7 +18,6 @@ for (let i=0; i<temps.length ; i++){
   temps[i].textContent = i+3+":00AM";
 }
 
-
 for (let i = 0; i < jour.length; i++) {
   jour[i].textContent = i + 1;
 }
@@ -73,6 +72,14 @@ formul.addEventListener('submit', (event) => {
   cases.appendChild(div);
   formul.style.display = "none";
 })
+
+const Supprimer = () =>{
+
+}
+
+const Moddify = () =>{
+  
+}
 
 
 
