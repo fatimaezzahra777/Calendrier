@@ -87,7 +87,13 @@ tbody .calandar-active:hover {
 }
 
 
+.calandar-active {
 
+    position: relative;
+    height: 80px;
+    vertical-align: top;
+
+}
 
 .temps_AM {
     display: block;
