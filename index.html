@@ -12,7 +12,7 @@
 </head>
 
 <body>
-      <div class="temps_AM">
+    <div class="temps_AM">
         <p class="trois"></p>
         <p class="quatre"></p>
         <p class="cinq"></p>
@@ -82,14 +82,16 @@
             </tr>
         </tbody>
     </table>
-  
+
 
     <section>
         <form class="formul">
-            <h1>Calandrier<small class="annule">x</small></h1>
+            <button class="btn-close annule" type="reset">.</button>
+            <h1>Calandrier</h1>
             
+
             <div class="form-calendrier">
-                <div>
+                <div class="col-md-6">
                     <label for="nom">Nom du client</label>
                     <input type="text" name="nom" id="nom" required />
                     <label for="heure">Heure de début</label>
@@ -97,7 +99,7 @@
                     <label for="date">Heure de fin</label>
                     <input type="time" id="date" required />
                 </div>
-                <div>
+                <div class="col-md-6">
                     <label for="time">La Date</label>
                     <input type="date" name="time" id="time">
                     <label for="nombre">Nombre de Personnes</label>
@@ -113,7 +115,11 @@
                 </div>
             </div>
 
-            <button type="submit" id="button">Ajouter</button>
+            <div class="d-flex justify-content-between mt-3">
+                <button type="submit" id="button" class="btn btn-dark px-4">Ajouter</button>
+                <button type="button" id="deleteBtn" class="btn btn-danger px-4" style="display:none;">Supprimer</button>
+            </div>
+
 
         </form>
     </section>

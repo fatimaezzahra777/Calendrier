@@ -13,7 +13,6 @@ const temp = document.querySelector(".temps_AM");
 const temps = temp.children;
 let cases = null;
 
-
 for (let i=0; i<temps.length ; i++){
   temps[i].textContent = i+3+":00AM";
 }
@@ -53,6 +52,7 @@ formul.addEventListener('submit', (event) => {
     num: document.querySelector("#nombre").value,
     type: document.querySelector("#reserv").value,
   }
+
   
 
   if (reserv.HeurDebut >= reserv.HeurFin) {
@@ -73,6 +73,32 @@ formul.addEventListener('submit', (event) => {
         <i class="fa fa-trash mx-1 text-light delete" title="Supprimer"></i></p>`;
   cases.appendChild(div);
   formul.style.display = "none";
+
+   if (Edit && currentReservation) {
+    currentReservation.querySelector("p").textContent = `${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}`;
+    currentReservation.className = `reserver ${colors[reserv.type]}`;
+    alert("Réservation modifiée !");
+  } else {
+    const div = document.createElement("div");
+    div.className = `reserver ${colors[reserv.type]}`;
+    div.innerHTML = `
+      <p class="m-0">${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}</p>
+      <div>
+        <i class="fa fa-pen mx-1 edit" title="Modifier"></i>
+        <i class="fa fa-trash mx-1 delete" title="Supprimer"></i>
+      </div>
+    `;
+    cases.appendChild(div);
+    attachActions(div);
+    alert("Réservation ajoutée !");
+  }
+
+
+  document.querySelector("#nom").value = nom;
+  document.querySelector("#heure").value = start;
+  document.querySelector("#date").value = end;
+  document.querySelector("#button").textContent = "Modifier";
+  document.querySelector("h3").textContent = "Modifier une réservation";
 })
 
 const Supprimer = () =>{
