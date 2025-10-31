@@ -10,6 +10,7 @@ const four = document.querySelector(".four").children;
 const five = document.querySelector(".five").children;
 const siix = document.querySelector(".siix").children;
 const temp = document.querySelector(".temps_AM");
+const deletBtn = document.querySelector("#deleteBtn");
 const temps = temp.children;
 let cases = null;
 
@@ -74,36 +75,18 @@ formul.addEventListener('submit', (event) => {
   cases.appendChild(div);
   formul.style.display = "none";
 
-   if (Edit && currentReservation) {
-    currentReservation.querySelector("p").textContent = `${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}`;
-    currentReservation.className = `reserver ${colors[reserv.type]}`;
-    alert("Réservation modifiée !");
-  } else {
-    const div = document.createElement("div");
-    div.className = `reserver ${colors[reserv.type]}`;
-    div.innerHTML = `
-      <p class="m-0">${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}</p>
-      <div>
-        <i class="fa fa-pen mx-1 edit" title="Modifier"></i>
-        <i class="fa fa-trash mx-1 delete" title="Supprimer"></i>
-      </div>
-    `;
-    cases.appendChild(div);
-    attachActions(div);
-    alert("Réservation ajoutée !");
-  }
+  const delet = document.querySelector(".delete");
+
+  delet.addEventListener('click', () => {
+    const confirm = confirm("Vouez vous Supprimer")
+    div.remove();
+    
+  })
 
 
-  document.querySelector("#nom").value = nom;
-  document.querySelector("#heure").value = start;
-  document.querySelector("#date").value = end;
-  document.querySelector("#button").textContent = "Modifier";
-  document.querySelector("h3").textContent = "Modifier une réservation";
 })
 
-const Supprimer = () =>{
 
-}
 
 const Moddify = () =>{
   

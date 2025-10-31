@@ -79,7 +79,7 @@ tbody .calandar-active:hover{
 }
 
 .formul h1{
-    text-align: center;
+    margin-left: 3em;
     color: #280235;
 }
 
@@ -115,8 +115,7 @@ tbody .calandar-active:hover{
       }
 
       .formul {
-        width: 90%;
-        left: 5%;
-        top: 5%;
+        left: 6%;
+        top: 6%;
       }
     }
