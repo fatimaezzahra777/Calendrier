@@ -8,7 +8,7 @@ L’utilisateur peut :
 - Supprimer une réservation
 - Chaque réservation affiche le **nom, l’heure de début et de fin**, ainsi que le **type** (VIP, Anniversaire, Place…)
 
-Le tout est géré avec **HTML, CSS et JavaScript pur (Vanilla JS)** sans frameworks externes.
+Le tout est géré avec **HTML, CSS et JavaScript ** sans frameworks externes.
 
 ---
 
@@ -50,7 +50,4 @@ Le tout est géré avec **HTML, CSS et JavaScript pur (Vanilla JS)** sans framew
 | **JavaScript (ES6)** | Gestion de la logique : ajout, suppression, modification |
 | **FontAwesome** | Icônes (🖊️ et 🗑️) utilisées pour les actions |
 
----
-
-## 📂 Structure du projet
 
