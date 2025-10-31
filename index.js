@@ -41,7 +41,7 @@ annule.addEventListener('click', () => {
 
 const colors = {
   Vip: "bg-danger text-white",
-  anniv: "bg-black text-white",
+  anniv: "bg-succes text-white",
   place: "bg-warning text-white"
 };
 
@@ -128,8 +128,6 @@ document.addEventListener("click", function (e) {
       document.getElementById("nom").value = nom;
       document.querySelector("#heure").value = debut;
       document.querySelector("#date").value = fin;
-
-
       document.querySelector("#reserv").value = "";
 
       currentEdit = reservation;

@@ -86,11 +86,8 @@ tbody .calandar-active:hover {
     color: #280235;
 }
 
-.calandar-active {
-    padding: 0;
-    padding-bottom: 0%;
 
-}
+
 
 .temps_AM {
     display: block;
@@ -104,9 +101,16 @@ tbody .calandar-active:hover {
 
 
 .reserver {
-    max-width: fit-content;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    background: #007bff;
+    color: white;
     border-radius: 5px;
-    margin: 0%;
+    padding: 3px;
+    font-size: 12px;
+    overflow: hidden;
 }
 
 .delete {
@@ -135,6 +139,6 @@ tbody .calandar-active:hover {
 
     .temps_AM p {
         font-size: 8px;
-        padding-bottom: 3px ;
+        padding-bottom: 3px;
     }
 }
