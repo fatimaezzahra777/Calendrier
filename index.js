@@ -5,10 +5,10 @@ const formulaire = document.querySelector(".form-calendrier");
 const calandar = document.querySelectorAll(".calandar-active");
 const btn = document.querySelector("#button");
 const annule = document.querySelector(".annule");
-const three = document.querySelector(".three");
-const four = document.querySelector(".four");
-const five = document.querySelector(".five");
-const siix = document.querySelector(".siix");
+const three = document.querySelector(".three").children;
+const four = document.querySelector(".four").children;
+const five = document.querySelector(".five").children;
+const siix = document.querySelector(".siix").children;
 const temp = document.querySelector(".temps_AM");
 const temps = temp.children;
 let cases = null;
@@ -17,10 +17,6 @@ let cases = null;
 for (let i=0; i<temps.length ; i++){
   temps[i].textContent = i+3+":00AM";
 }
-const heur3 = "3:00AM";
-const heur4 = "4:00AM";
-const heur5 = "5:00AM";
-const heur6 = "6:00AM";
 
 
 for (let i = 0; i < jour.length; i++) {
