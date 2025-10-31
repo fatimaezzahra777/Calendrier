@@ -80,6 +80,7 @@ tbody .calandar-active:hover{
 
 .formul h1{
     text-align: center;
+    color: #280235;
 }
 
 .calandar-active{
@@ -94,7 +95,9 @@ tbody .calandar-active:hover{
 
 .annule{
     cursor: pointer;
-    text-align: end;
+    margin-left: 2.6em;
+    color: #23022e;
+
 
 }
 
