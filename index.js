@@ -52,8 +52,8 @@ formul.addEventListener('submit', (event) => {
   }
 
   const div = document.createElement("div");
-  div.className = `${colors[reserv.type]}`;
-  div.innerHTML = `<p>${reserv.nom}</p>${reserv.HeurDebut}-${reserv.HeurFin}`;
+  div.className = `reserver ${colors[reserv.type]}`;
+  div.innerHTML = `<p>${reserv.nom} ${reserv.HeurDebut}-${reserv.HeurFin}</p>`;
   cases.appendChild(div);
   formul.style.display = "none";
   

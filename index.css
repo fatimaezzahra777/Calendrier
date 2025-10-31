@@ -7,7 +7,6 @@ body {
 table {
     width: 100%;
     text-align: center;
-    border-radius: 5%;
     position: relative;
 }
 
@@ -83,7 +82,15 @@ tbody .calandar-active:hover{
     text-align: center;
 }
 
+.calandar-active{
+    padding: 0;
+}
 
+.reserver{
+    max-block-size: 2em;
+    max-width: fit-content;
+    margin: 0;
+}
 
 
 /*Responsive*/
